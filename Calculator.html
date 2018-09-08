@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\Mai\Desktop\calculator59160135\style.css">
+
+
+</head>
+<body background = C:\Users\Mai\Desktop\calculator59160135\bg.gif>
+<div align="center">
+        <button class="buttonAns"  id="aneButton"><font color="white" font size=5>
+        CALCULATOR
+         </font></button><br><br>
+
+    <tr>
+        <input class="input" font size=10 type="text" id="firstNumber" placeholder="put firstNumber">
+        &emsp;
+        <input class="input" font size=10 type="text" id="secondNumber" placeholder="put secondNumber"> 
+    </tr><br><br>
+
+    <tr> 
+        <button class="button"  id="AdditionButton" onclick="getAddition()"             ><font color="white" font size=5>+</font></button>
+        <button class="button"  id="SubtractionButton" onclick="getSubtraction()"       ><font color="white" font size=5>-</font></button>
+        <button class="button"  id="MultiplicationButton" onclick="getMultiplication()" ><font color="white" font size=5>*</font></button>
+        <button class="button"  id="DivisionButton" onclick="getDivision()"             ><font color="white" font size=5>/</font></button>
+        <button class="button"  id="PowerButton" onclick="getPower()"                   ><font color="white" font size=5>^</font></button>
+        <button class="button"  id="ModButton" onclick="getMod()"                       ><font color="white" font size=5>%</font></button>
+
+    </tr><br><br>
+
+
+<div>
+        <button class="buttonAns"  id="aneButton"><font color="white" font size=5>
+            <div id="output"></div>
+        </font></button>
+</div>
+    
+
+</div>
+
+    <script>
+        var firstNumber = document.getElementById("firstNumber");
+        var secondNumber = document.getElementById("secondNumber");
+        var output = document.getElementById("output");
+
+        function getAddition(){
+            let sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+            showResult(sum);
+        }
+        function getSubtraction(){
+            let sum = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+            showResult(sum);
+        }
+        function getMultiplication(){
+            let sum = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+            showResult(sum);
+        }
+        function getDivision(){
+            let sum = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+            showResult(sum);
+        }
+        function getPower(){
+            let sum = Math.pow(parseInt(firstNumber.value),parseInt(secondNumber.value));
+            showResult(sum);
+        }
+        function getMod(){
+            let sum = parseInt(firstNumber.value) % parseInt(secondNumber.value);
+            showResult(sum);
+        }
+
+        function showResult (result){
+            output.innerHTML = "ANSWER : " + result;
+        }
+
+    </script>
+        
+</body>
+</html>
+
+
